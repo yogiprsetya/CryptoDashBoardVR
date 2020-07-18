@@ -21,8 +21,51 @@ export default class CryptoModel extends React.Component {
   }
 };
 
-const styles = StyleSheet.create({
+class LeftPanel extends React.Component {
+  render() {
+    return (
+      <View style={styles.wrapper}>
+        <View style={styles.header}>
+          <Text style={styles.textSize}>Information</Text>
+        </View>
+      </View>
+    )
+  }
+}
 
+class RightPanel extends React.Component {
+  render() {
+    return (
+      <View style={styles.wrapper}>
+        <View style={styles.header}>
+          <Text style={styles.textSize}>Crypto</Text>
+        </View>
+      </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  wrapper: {
+    width: 300,
+    height: 600,
+    backgroundColor: '#00171F',
+    borderColor: '#003459',
+    borderWidth: 10,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    padding: 10
+  },
+  header: {
+    backgroundColor: '#003459'
+  },
+  textSize: {
+    fontSize: 30,
+    textAlign: 'center'
+  }
 });
 
+AppRegistry.registerComponent('LeftPanel', () => LeftPanel);
+AppRegistry.registerComponent('RightPanel', () => RightPanel);
 AppRegistry.registerComponent('CryptoModel', () => CryptoModel);
