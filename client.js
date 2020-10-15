@@ -20,16 +20,16 @@ function init(bundle, parent, options = {}) {
   leftPanel.setAngle(-0.5, 0)
 
   r360.renderToSurface(
-    r360.createRoot('leftPanel', { /* initial props */ }),
-    leftPanel
+    r360.createRoot('LeftPanel'),
+    leftPanel,
   );
 
   const rightPanel = new Surface(300, 600, Surface.SurfaceShape.Flat)
   rightPanel.setAngle(0.5, 0)
 
   r360.renderToSurface(
-    r360.createRoot('rightPanel', { /* initial props */ }),
-    rightPanel
+    r360.createRoot('RightPanel'),
+    rightPanel,
   );
 
   // Load the initial environment
